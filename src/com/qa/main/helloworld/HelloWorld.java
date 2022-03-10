@@ -1,4 +1,5 @@
-package com.qa.main;
+package com.qa.main.helloworld;
+
 
 /**
  * A simple class that either prints "Hello World!" 
@@ -43,4 +44,6 @@ public class HelloWorld {
 		System.out.println(msg);
 	}
 	
+
 }
+
