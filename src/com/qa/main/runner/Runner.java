@@ -4,6 +4,7 @@ import com.qa.main.helloworld.HelloWorld;
 import com.qa.main.stringmanipulation.*;
 import com.qa.main.coins.*;
 import com.qa.main.numbers.*;
+import com.qa.main.person.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -27,7 +28,7 @@ public class Runner {
 //			System.out.println(a.representInt(i));
 //		}
 		
-		StringManipulation b = new StringManipulation();
+//		StringManipulation b = new StringManipulation();
 		
 //		System.out.println(b.methodOneV2("This has four words"));
 //		System.out.println(b.methodOneV2("This one has five words"));
@@ -41,7 +42,11 @@ public class Runner {
 //		System.out.println(b.methodFour("This one is false", "true"));
 //		System.out.println(b.methodFour("This one is true", " one"));
 //		System.out.println(b.methodFour("This one is true", "This"));
-		System.out.println(b.methodFour("This one is false", " This"));
+//		System.out.println(b.methodFour("This one is false", " This"));
+		
+		Person a = new Person("Harry Harrison",103,"Inventor");
+		a.fillPeople();
+		System.out.println(a.getPerson("John Smith"));
 	}
 
 }

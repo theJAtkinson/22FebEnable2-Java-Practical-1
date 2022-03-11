@@ -26,7 +26,6 @@ public class StringManipulation {
 				}
 			}
 		}
-		
 		return numOfWords;
 	}
 	
@@ -45,12 +44,12 @@ public class StringManipulation {
 		}
 	}
 	
-	public void methodThree(String str) {
+	public void methodThree(String str) throws IllegalArgumentException {
 		
 		int endOfWord = str.length(); //set end of last word (not inclusive for substring)
 		// Check to see if spaces exist at beginning and end
 		if(str.substring(0, 1).equals(" ") || str.substring(str.length()-1).equals(" ")) {
-			System.out.println("String not in correct format");
+			throw new IllegalArgumentException("String inputs cannot start or end with ' '");
 		}else {		
 			for(int i = str.length();i>0;i--) { //iterate backwards through string length
 				if(str.substring(i-1,i).equals(" ")) { // if a space is found
@@ -76,7 +75,7 @@ public class StringManipulation {
 		return out;
 	}
 	
-	public int methodOneV2(String str) {
+	public int methodOneV2(String str) { //Use .split() to create a String[] is far more efficient.
 		int wordcount = 1;
 		if (str.startsWith(" ") || str.endsWith(" ")) {
 			System.out.println("String not in correct format");
@@ -89,13 +88,14 @@ public class StringManipulation {
 			}
 		}
 		return wordcount;
+		
 	}
 	
 	public void methodTwoV2(String str) {
 		System.out.println(str.replace(' ', '\n'));
 	}
 	
-	public void methodThreeV2(String str) {
+	public void methodThreeV2(String str) { //See methodOneV2 comment.
 		if (str.startsWith(" ") || str.endsWith(" ")) {
 			System.out.println("String not in correct format");
 		}
@@ -122,7 +122,7 @@ public class StringManipulation {
 	}
 
 	public boolean methodFourV2(String strmsg, String strfind) {
-		return strmsg.contains(strmsg);
+		return strmsg.contains(strfind);
 	}
 }
 
