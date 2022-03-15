@@ -1,10 +1,7 @@
 package com.qa.main.person;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Person {
-	private List<Person> people = new ArrayList<>();
+
 	
 	private String name;
 	private int age;
@@ -21,25 +18,28 @@ public class Person {
 		return ("Person's name is: " + name + ", their age is " + age +  ", their job title is: " + jobtitle);
 	}
 	
-	public void fillPeople() {
-		Person john = new Person("John Smith", 35, "CEO");
-		Person sally = new Person("Sally Robinson", 26, "CEO (as well)");
-		Person tyler = new Person("Tyler Bradley", 50, "Janitor in chief");
-		people.add(john);
-		people.add(sally);
-		people.add(tyler);
+
+	public String getName() {
+		return name;
 	}
-	
-	public void addPerson(Person person) {
-		people.add(person);
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public String getPerson(String name) {
-		for(Person p : people) {
-			if(p.name.equals(name)) {
-				return p.toString();
-			}
-		}
-		return "Person does not exist";
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getJobtitle() {
+		return jobtitle;
+	}
+
+	public void setJobtitle(String jobtitle) {
+		this.jobtitle = jobtitle;
 	}
 }
