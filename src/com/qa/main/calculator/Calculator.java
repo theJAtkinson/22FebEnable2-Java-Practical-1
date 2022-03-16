@@ -50,32 +50,38 @@ public class Calculator {
 		return (integer1 - integer2);
 	}
 	
-	public double toDivide() {
+	public double toDivide() throws InappropriateDividerException{
+		if(int2>int1) {
+			throw new InappropriateDividerException();
+		}
 		return toDivide((double)int1, (double)int2);
 	}
 	
 	 /** Divides one integer by another
 	 * @return integer2 divided by integer1
 	 */
-	public double toDivide(double integer1, double integer2) { 
-			return (integer1 / integer2);
+	public double toDivide(double integer1, double integer2) throws InappropriateDividerException{ 
+		if(integer2>integer1) {
+			throw new InappropriateDividerException();
+		}
+		return (integer1 / integer2);
 	}
 	
-	public void doSums() {
-		doSums(int1,int2);
-	}
-	
-	/**
-	 * Prints out the four calculations in the class in sequence.
-	 * @param A integer 1
-	 * @param B integer 2
-	 */ 
-	public void doSums(int A, int B) {
-		System.out.println(A+""+B+"="+toAdd(A,B));	
-		System.out.println(A+"*"+B+"="+toMultiply(A,B));
-		System.out.println(A+"-"+B+"="+toSubtract(A,B));
-		System.out.println(A+"/"+B+"="+toDivide(A,B));
-	}
-	
+//	public void doSums() {
+//		doSums(int1,int2);
+//	}
+//	
+//	/**
+//	 * Prints out the four calculations in the class in sequence.
+//	 * @param A integer 1
+//	 * @param B integer 2
+//	 */ 
+//	public void doSums(int A, int B) {
+//		System.out.println(A+""+B+"="+toAdd(A,B));	
+//		System.out.println(A+"*"+B+"="+toMultiply(A,B));
+//		System.out.println(A+"-"+B+"="+toSubtract(A,B));
+//		System.out.println(A+"/"+B+"="+toDivide(A,B));
+//	}
+//	
 
 }

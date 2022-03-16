@@ -18,10 +18,10 @@ public class PersonManager {
 	public String getPersonFromName(String name) {
 		for(Person p : people) {
 			if(p.getName().equals(name)) {
-				return p.toString();
+				return "Person found: \n"+p.toString();
 			}
 		}
-		return "Person does not exist";
+		return "Person not found";
 	}
 	
 	public void removePerson(Person person) {

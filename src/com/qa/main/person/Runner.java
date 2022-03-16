@@ -13,7 +13,9 @@ public class Runner {
 		a.addPerson(sally);
 		a.addPerson(tyler);
 		
-		System.out.println(a);
+		PersonMenu pm = new PersonMenu(a);
+		
+		pm.run();
 
 	}
 
